@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Coin flip</title>
+  <link rel="stylesheet" href="css/coin-flip.css">
+
+</head>
+
+<body>
+
+  <div>
+    <img id="coin" src="img/coin-flip.gif" alt="">
+  </div>
+
+
+  <button type="button" id="button">Flip Coin</button>
+  <h2 id="results"></h2>
+
+  <script type="text/javascript">
+    document.getElementById("button").addEventListener("click", flipCoin)
+
+    let head = 0,
+      tails = 0;
+
+    function flipCoin() {
+      x = (Math.floor(Math.random() * 2) == 0);
+      if (x) {
+        document.getElementById("coin").src = "img/head.png"
+        result("head")
+      } else {
+        document.getElementById("coin").src = "img/tails.png"
+        result("tails")
+      }
+    };
+
+    function result(coin) {
+      document.getElementById("results").textContent = "You got : " + coin;
+    };
+  </script>
+  <script type="text/javascript" src="coin-flip.js">
+
+  </script>
+</body>
+
+</html>Hello content!Hello content!
